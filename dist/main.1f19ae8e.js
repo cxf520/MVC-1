@@ -11025,24 +11025,30 @@ var $button2 = (0, _jquery.default)('#minus1');
 var $button3 = (0, _jquery.default)('#mul2');
 var $button4 = (0, _jquery.default)('#divide2');
 var $number = (0, _jquery.default)('#number');
+var n = localStorage.getItem('n');
+$number.text(n || 100);
 $button1.on('click', function () {
   var n = parseInt($number.text());
   n += 1;
+  localStorage.setItem('n', n);
   $number.text(n);
 });
 $button2.on('click', function () {
   var n = parseInt($number.text());
   n -= 1;
+  localStorage.setItem('n', n);
   $number.text(n);
 });
 $button3.on('click', function () {
   var n = parseInt($number.text());
   n *= 2;
+  localStorage.setItem('n', n);
   $number.text(n);
 });
 $button4.on('click', function () {
   var n = parseInt($number.text());
   n /= 2;
+  localStorage.setItem('n', n);
   $number.text(n);
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","./app1.css":"app1.css"}],"app2.css":[function(require,module,exports) {
